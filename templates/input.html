@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loan Predict</title>
+    <style>
+        input {
+            background-color: whitesmoke;
+        }
+        h1 {
+            font-family: Impact;
+        }
+    </style>
+</head>
+<body style="background-color:white; color: darkslategrey; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+    <center>
+    <table>
+    <h1 style="color: darkslategrey;"> Loan Predict</h1>
+    <form method="POST" action="http://127.0.0.1:5000/predict">
+        <tr>
+        <td style="color: darkslategrey"> Age: </td>
+        <td><input type="number" name="DAYS_AGE" step="1" min="21" max="64" placeholder="Input number" style="width: 150px;" required/> </td>
+        </tr>
+        <tr>
+        <td style="color: darkslategrey">Installment/month: </td>
+        <td><input type="number" name="ANNUITY" step="1" min="0" placeholder="Input number" style="width: 150px;" required/> </td>
+        </tr>
+        <tr>
+        <td style="color: darkslategrey">Years of work: </td>
+        <td><input type="number" name="DAYS_WORK" step="1" min="0" placeholder="Input number" style="width: 150px;" required/> </td>
+        </tr>
+        <tr>
+        <td style="color: darkslategrey">Income/month: </td>
+        <td><input type="number" name="INCOME" step="1" min="0" placeholder="Input number" style="width: 150px;" required/> </td>
+        </tr>
+        <tr>
+        <td style="color: darkslategrey"><label for="INCOME_TYPE">Income Type:</label></td>
+        <td><select name="INCOME_TYPE">
+            <option value="Working">Working</option>
+            <option value="Commercial associate">Commercial Associate</option>
+            <option value="Pensioner">Pensioner</option>
+            <option value="State servant">State Servant</option>
+            <option value="Unemployed">Unemployed</option>
+        </select></td>
+        </tr>
+        </table>
+        <br>
+        <input type="submit" value="Predict"/>
+        </br>
+    </form>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQiYXhKX7RmbvMLnePxDVSYw-jXzpkYLsjZ2w6m6n_IkLtjldCM" width="20%">
+    </center>
+</body>
+</html>
